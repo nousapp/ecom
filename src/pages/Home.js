@@ -1,23 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// Components
+// components
 import Head from './Head';
+import Card from '../components/Card';
+// helpers
+import makeObj from '../data/makeInfo';
+import background from '../assets/img/trinityBackgroundWhite.png';
+// scss
+import '../styles/Home.scss';
 
 class Home extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const {
       location: { pathname: pathName },
     } = this.props;
-
+    const makeInfo = Object.values(makeObj);
     return (
-      <main>
+      <main background={background}>
         <Head pathName={pathName} title="Home | Aura" />
-        <p>This is home</p>
+        <section className="cardGrid">
+          {makeInfo.map(member => (
+            <Card
+              key={member.fullName}
+              img={member.src}
+              fullName={member.fullName}
+              role={member.role}
+              mailLink={member.mailLink}
+            />
+          ))}
+        </section>
       </main>
     );
   }

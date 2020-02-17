@@ -1,5 +1,5 @@
 import React from 'react';
-import auraLogo from '../assets/img/auraLogo.png';
+import motorcycleIcon from '../assets/img/motorcycleIcon.png';
 import '../styles/Footer.scss';
 
 class Footer extends React.Component {
@@ -8,7 +8,7 @@ class Footer extends React.Component {
       <footer className="pageFooter">
         <div>
           <div>
-            <img src={auraLogo} alt="auraLogo" />
+            <img src={motorcycleIcon} alt="motorcycleIcon" />
           </div>
           <p>© 2020 Nous</p>
         </div>

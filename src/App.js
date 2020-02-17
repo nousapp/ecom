@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Home } from './pages';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import auraLogo from './assets/img/auraLogo.png';
+import motorcycleIcon from './assets/img/motorcycleIcon.png'; 
 import './styles/main.scss';
 
 class App extends React.Component {
@@ -20,7 +20,7 @@ class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <Header logo={auraLogo} />
+        <Header logo={motorcycleIcon} />
         <Switch>
           {/* <Route path="/" exact component={Home} /> */}
           <Route
