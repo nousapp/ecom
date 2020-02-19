@@ -19,17 +19,22 @@ class Home extends React.Component {
     return (
       <main background={background}>
         <Head pathName={pathName} title="Home | Aura" />
+        <div className="title">
+          <div className="gray">
+            <h1 className="pageTitle">Find Your Motorcycle Parts</h1>
+            <h3 className="makeTitle">Select your make:</h3>
+
         <section className="cardGrid">
           {makeInfo.map(member => (
             <Card
-              key={member.fullName}
+              key={member.name}
               img={member.src}
-              fullName={member.fullName}
-              role={member.role}
-              mailLink={member.mailLink}
+              name={member.name}
             />
           ))}
         </section>
+          </div>
+        </div>
       </main>
     );
   }

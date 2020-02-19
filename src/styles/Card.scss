@@ -1,15 +1,19 @@
 .cardGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-  justify-items: center;
+  // display: grid;
+  // grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  // justify-items: center;
   grid-gap: 2rem;
-  margin: 3rem;
+  padding-bottom: 6rem;
 }
 
 // Animation Transitions
 .cardContainer {
   height: 15rem;
   width: 15rem;
+  margin: 2.5rem;
   perspective: 500;
   position: relative;
 }
